@@ -17,7 +17,7 @@
                 <strong>Release Date: </strong>{{album.release_date}}<br />
                 <strong>Tracks: </strong>{{album.total_tracks.toString()}}<br /><br />
                 <mat-card-content >
-                    <mat-chip-list aria-label="Artist selection" *ngFor="let artist of album.artists">
+                    <mat-chip-list aria-label="Artist selection" *ngFor="let artist of album?.artists">
                         <a style="text-decoration: none;" [routerLink]="['/artist', artist.id]"><mat-chip>{{artist.name}}</mat-chip></a>
                     </mat-chip-list>
                 </mat-card-content>
